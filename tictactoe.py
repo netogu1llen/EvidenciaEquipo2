@@ -1,11 +1,10 @@
 """Tic Tac Toe
 
-Exercises
-
-1. Give the X and O a different color and width.
-2. What happens when someone taps a taken spot?
-3. How would you detect when someone has won?
-4. How could you create a computer player?
+Juego base modificado:
+1. Cambio de tamanio en simbolos
+2. Cambio de color en simbolos
+3. Centrar simbolos
+4. Validar si una casilla ya esta ocupada
 """
 
 from turtle import *
@@ -23,8 +22,8 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
-    line(x, y, x + 133, y + 133)
-    line(x, y + 133, x + 133, y)
+    line(x, y, x + 65, y + 65)
+    line(x, y + 65, x + 65, y)
 
 
 def drawo(x, y):
@@ -32,7 +31,7 @@ def drawo(x, y):
     up()
     goto(x + 67, y + 5)
     down()
-    circle(62)
+    circle(31)
 
 
 def floor(value):
