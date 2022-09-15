@@ -133,6 +133,7 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
+            
         else:
             options = [
                 vector(5, 0),
@@ -153,8 +154,8 @@ def move():
     for point, course in ghosts:
         if abs(pacman - point) < 20:
             return
-
-    ontimer(move, 100)
+#Aca se cambia la speed.
+    ontimer(move, 10)
 
 
 def change(x, y):
