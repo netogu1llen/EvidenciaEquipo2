@@ -7,7 +7,8 @@ Juego base modificado:
 4. Validar si una casilla ya esta ocupada
 """
 
-from turtle import *
+from turtle import color, goto, up, down, circle, setup, hideturtle
+from turtle import tracer, update, onscreenclick, done
 
 from freegames import line
 
