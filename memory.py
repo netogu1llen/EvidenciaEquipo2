@@ -55,7 +55,7 @@ def tap(x, y):
     spot = index(x, y)
     mark = state['mark']
 
-    if mark is None or mark == spot or tiles[mark] != tiles[spot]:
+    if mark is None or mark == spot or tiles[mark] != tiles[spot$:
         tap_count+=1
         state['mark'] = spot
     else:
@@ -84,9 +84,8 @@ def draw():
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
 
-    if any(show):
+    if hide==False:
         clear()
-        color('Red')
         goto(0,0)
         write('You Won !!!',align='center', font=('Arial', 30, 'normal'))
         goto(0,-50)
