@@ -10,8 +10,20 @@ Exercises
 """
 
 from random import choice
-from turtle import *
-
+from random import Turtle
+from random import bgcolor
+from random import clear
+from random import up
+from random import goto
+from random import dot
+from random import ontimer
+from random import setup
+from random import hideturtle
+from random import tracer
+from random import onkey
+from random import listen
+from random import done
+from random import update
 from freegames import floor, vector
 
 state = {'score': 0}
@@ -133,7 +145,6 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
-            
         else:
             options = [
                 vector(5, 0),
@@ -154,7 +165,7 @@ def move():
     for point, course in ghosts:
         if abs(pacman - point) < 20:
             return
-#Aca se cambia la speed.
+
     ontimer(move, 10)
 
 
