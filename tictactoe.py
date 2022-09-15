@@ -54,13 +54,26 @@ def tap(x, y):
     """Draw X or O in tapped square."""
     x = floor(x)
     y = floor(y)
-    player = state['player']
-    draw = players[player]
-    draw(x, y)
-    update()
-    state['player'] = not player
+    """Functions to check if a click is taken"""
+    if y not in posy:
+        posy[y] = []
+    if x not in posx:
+        posx[x] = []
+    if x in posy[y] and y in posx[x]:
+        return
+    else:
+        """If its free then put a simbol"""
+        posx[x].append(y)
+        posy[y].append(x)
+        player = state['player']
+        draw = players[player]
+        draw(x, y)
+        update()
+        state['player'] = not player
 
 
+posx = {}
+posy = {}
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
