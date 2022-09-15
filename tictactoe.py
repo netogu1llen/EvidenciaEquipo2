@@ -22,6 +22,8 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
+    """color cambia el color de la linea"""
+    color('red')
     """Change number values for width and position"""
     line(x + 100, y + 33, x + 33, y + 100)
     line(x + 100, y + 100, x + 33, y + 33)
@@ -33,6 +35,8 @@ def drawo(x, y):
     """Change goto values for position"""
     goto(x + 67, y + 33)
     down()
+    """color cambia el color de la linea"""
+    color('blue')
     """Change circle value for width"""
     circle(31)
 
