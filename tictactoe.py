@@ -22,15 +22,18 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
-    line(x, y, x + 65, y + 65)
-    line(x, y + 65, x + 65, y)
+    """Change number values for width and position"""
+    line(x + 100, y + 33, x + 33, y + 100)
+    line(x + 100, y + 100, x + 33, y + 33)
 
 
 def drawo(x, y):
     """Draw O player."""
     up()
-    goto(x + 67, y + 5)
+    """Change goto values for position"""
+    goto(x + 67, y + 33)
     down()
+    """Change circle value for width"""
     circle(31)
 
 
